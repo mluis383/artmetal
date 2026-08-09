@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO & Meta Tags -->
+    <title>Artmetal | Serralheria, Portões, Vidraçaria e Estruturas Metálicas</title>
+    <meta name="description" content="Artmetal - Portões sob medida, vidraçaria, box de banheiro, corrimãos, guarda-corpos, sacadas, grades de proteção e estruturas metálicas. Monte seu projeto online!">
+    <meta name="keywords" content="serralheria, portões, vidraçaria, box de banheiro, corrimão, guarda-corpo, sacadas, grades, estruturas metálicas, Artmetal">
+    <meta name="author" content="Artmetal">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Artmetal | Serralheria e Soluções em Metal e Vidro">
+    <meta property="og:description" content="Projetos sob medida para residências e empresas. Portões, vidraçaria, guarda-corpos, sacadas e estruturas metálicas.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Fontes Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Ícones Lucide -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <!-- ========================================== -->
+    <!-- HEADER & MENU NAVEGAÇÃO                   -->
+    <!-- ========================================== -->
+    <header class="header" id="header">
+        <div class="container header-container">
+            <a href="#inicio" class="logo">
+                <span class="logo-text">ART<span class="highlight">METAL</span></span>
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#inicio" class="nav-link active">Início</a></li>
+                    <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                    
+                    <!-- Menu Dropdown Serviços -->
+                    <li class="dropdown-item" id="dropdown-servicos-item">
+                        <span class="nav-link dropdown-toggle" id="dropdown-servicos-toggle">
+                            SERVIÇOS <i data-lucide="chevron-down" class="dropdown-icon"></i>
+                        </span>
+                        <ul class="dropdown-menu" id="dropdown-servicos-menu">
+                            <li><a href="#configurador" class="dropdown-link">Portões</a></li>
+                            <li><a href="#servico-vidracaria" class="dropdown-link">Vidraçaria</a></li>
+                            <li><a href="#servico-box" class="dropdown-link">Box de Banheiro</a></li>
+                            <li><a href="#servico-corrimaos" class="dropdown-link">Corrimãos</a></li>
+                            <li><a href="#servico-guarda-corpos" class="dropdown-link">Guarda-Corpos</a></li>
+                            <li><a href="#servico-sacadas" class="dropdown-link">Sacadas</a></li>
+                            <li><a href="#servico-grades" class="dropdown-link">Grades</a></li>
+                            <li><a href="#servico-estruturas" class="dropdown-link">Estruturas Metálicas</a></li>
+                            <li><a href="#servico-personalizados" class="dropdown-link">Projetos Personalizados</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#como-funciona" class="nav-link">Como Funciona</a></li>
+                    <li><a href="#projetos" class="nav-link">Projetos</a></li>
+                    <li><a href="#contato" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="#configurador" class="btn btn-primary">
+                    <i data-lucide="calculator"></i>
+                    <span>MONTE SEU PORTÃO</span>
+                </a>
+                <button class="hamburger-btn" id="hamburger-btn" aria-label="Abrir Menu">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="inicio" class="hero">
+        <div class="hero-bg-overlay"></div>
+        <div class="container hero-content">
+            <div class="hero-badge">
+                <i data-lucide="shield-check"></i> Tecnologia & Precisão em Serralheria e Vidraçaria
+            </div>
+            <h1 class="hero-title">Seu projeto <span class="text-gradient">começa aqui.</span></h1>
+            <p class="hero-subtitle">Portões, estruturas metálicas e vidraçaria sob medida, desenvolvidos para unir segurança máxima, alta durabilidade e design moderno.</p>
+            
+            <div class="hero-buttons">
+                <a href="#configurador" class="btn btn-primary btn-lg">
+                    <i data-lucide="sliders"></i> MONTE SEU PORTÃO
+                </a>
+                <a href="#servicos-geral" class="btn btn-outline btn-lg">
+                    <i data-lucide="grid"></i> VER TODOS OS SERVIÇOS
+                </a>
+            </div>
+
+            <div class="hero-callout">
+                <i data-lucide="sparkles"></i>
+                <span>Soluções completas sob medida para sua residência ou empresa.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre" class="section bg-light">
+        <div class="container text-center">
+            <span class="section-tag">TRADIÇÃO E QUALIDADE</span>
+            <h2 class="section-title">Sobre a Artmetal</h2>
+            <p class="section-desc">Com anos de excelência no mercado de serralheria, a Artmetal destaca-se no desenvolvimento de portões, estruturas em aço inox e projetos especiais em vidro, proporcionando segurança, sofisticação e perfeição em cada detalhe.</p>
+        </div>
+    </section>
+
+    <!-- SEÇÃO VISÃO GERAL DOS SERVIÇOS -->
+    <section id="servicos-geral" class="section">
+        <div class="container text-center">
+            <span class="section-tag">NOSSO PORTFÓLIO</span>
+            <h2 class="section-title">Soluções em Metal, Vidro e Acabamentos</h2>
+            <p class="section-desc">Projetos sob medida para residências, comércios e empresas.</p>
+
+            <div class="services-grid">
+                <!-- Card 1 -->
+                <div class="service-card">
+                    <div class="service-card-icon"><i data-lucide="door-closed"></i></div>
+                    <h3>Portões</h3>
+                    <p>Portões residenciais e comerciais desenvolvidos sob medida, com diferentes modelos, acabamentos e opções de automação.</p>
+                    <a href="#configurador" class="btn btn-primary btn-sm">CONHECER PORTÕES</a>
+                </div>
+                <!-- Card 2 -->
+                <div class="service-card">
+                    <div class="service-card-icon"><i data-lucide="layers"></i></div>
+                    <h3>Vidraçaria</h3>
+                    <p>Vidros temperados e laminados para portas, janelas e divisórias com acabamento moderno e seguro.</p>
+                    <a href="#servico-vidracaria" class="btn btn-primary btn-sm">CONHECER VIDRAÇARIA</a>
+                </div>
+                <!-- Card 3 -->
+                <div class="service-card">
+                    <div class="service-card-icon"><i data-lucide="bath"></i></div>
+                    <h3>Box de Banheiro</h3>
+                    <p>Acabamento elegante, segurança e facilidade de manutenção para o seu banheiro.</p>
+                    <a href="#servico-box" class="btn btn-primary btn-sm">CONHECER BOX</a>
+                </div>
+                <!-- Card 4 -->
+                <div class="service-card">
+                    <div class="service-card-icon"><i data-lucide="trending-up"></i></div>
+                    <h3>Corrimãos</h3>
+                    <p>Segurança e acessibilidade em escadas e rampas com estruturas metálicas ou em aço inox.</p>
+                    <a href="#servico-corrimaos" class="btn btn-primary btn-sm">CONHECER CORRIMÃOS</a>
+                </div>
+                <!-- Card 5 -->
+                <div class="service-card">
+                    <div class="service-card-icon"><i data-lucide="shield"></i></div>
+                    <h3>Guarda-Corpos</h3>
+                    <p>Proteção essencial para sacadas, escadas e mezaninos alinhando design arquitetônico e norma técnica.</p>
+                    <a href="#servico-guarda-corpos" class="btn btn-primary btn-sm">CONHECER GUARDA-CORPOS</a>
+                </div>
+                <!-- Card 6 -->
+                <div class="service-card">
+                    <div class="service-card-icon"><i data-lucide="sun"></i></div>
+                    <h3>Sacadas e Varandas</h3>
+                    <p>Fechamentos e estruturas que transformam e agregam valor e conforto ao seu espaço externo.</p>
+                    <a href="#servico-sacadas" class="btn btn-primary btn-sm">CONHECER SACADAS</a>
+                </div>
+                <!-- Card 7 -->
+                <div class="service-card">
+                    <div class="service-card-icon"><i data-lucide="grid"></i></div>
+                    <h3>Grades de Proteção</h3>
+                    <p>Grades resistentes para janelas, portas e muros garantindo máxima tranquilidade para sua família.</p>
+                    <a href="#servico-grades" class="btn btn-primary btn-sm">CONHECER GRADES</a>
+                </div>
+                <!-- Card 8 -->
+                <div class="service-card">
+                    <div class="service-card-icon"><i data-lucide="building-2"></i></div>
+                    <h3>Estruturas Metálicas</h3>
+                    <p>Mezaninos, coberturas e estruturas comerciais e industriais de alta resistência e durabilidade.</p>
+                    <a href="#servico-estruturas" class="btn btn-primary btn-sm">CONHECER ESTRUTURAS</a>
+                </div>
+                <!-- Card 9 -->
+                <div class="service-card">
+                    <div class="service-card-icon"><i data-lucide="sparkles"></i></div>
+                    <h3>Projetos Personalizados</h3>
+                    <p>Soluções sob medida desenhadas exclusivamente para transformar sua ideia em um projeto real.</p>
+                    <a href="#servico-personalizados" class="btn btn-primary btn-sm">CONHECER PERSONALIZADOS</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- CONFIGURADOR DE PORTÕES (EXISTENTE - INTACTO) -->
+    <!-- ========================================== -->
+    <section id="configurador" class="section bg-dark configurador">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-tag section-tag-light">CATEGORIA PORTÕES</span>
+                <h2 class="section-title text-white">Portões</h2>
+                <p class="section-desc text-gray">Segurança, praticidade e acabamento para valorizar seu imóvel.</p>
+                <div class="gate-features-tags">
+                    <span>Portões de chapa</span> • <span>Portões de tubo</span> • <span>Portões chapa e tubo</span> • <span>Portões veneziana</span> • <span>Modelos personalizados</span> • <span>Opções de automação</span> • <span>Galvanização</span> • <span>Social embutido</span>
+                </div>
+            </div>
+
+            <!-- Stepper de Passos -->
+            <div class="config-stepper margin-top">
+                <div class="step-item active" data-step="1">
+                    <div class="step-number">1</div>
+                    <span class="step-label">Modelo</span>
+                </div>
+                <div class="step-line"></div>
+                <div class="step-item" data-step="2">
+                    <div class="step-number">2</div>
+                    <span class="step-label">Medidas</span>
+                </div>
+                <div class="step-line"></div>
+                <div class="step-item" data-step="3">
+                    <div class="step-number">3</div>
+                    <span class="step-label">Opcionais</span>
+                </div>
+                <div class="step-line"></div>
+                <div class="step-item" data-step="4">
+                    <div class="step-number">4</div>
+                    <span class="step-label">Resumo</span>
+                </div>
+                <div class="step-line"></div>
+                <div class="step-item" data-step="5">
+                    <div class="step-number">5</div>
+                    <span class="step-label">Finalizar</span>
+                </div>
+            </div>
+
+            <div class="config-wrapper">
+                <div class="config-main-content">
+
+                    <!-- PASSO 1: MODELO -->
+                    <div class="config-step-pane active" id="step-pane-1">
+                        <h3 class="pane-title"><i data-lucide="layout-grid"></i> Selecione o Modelo Base</h3>
+                        <div class="grid-models">
+                            <div class="card-model-select selected" data-model="chapa">
+                                <div class="model-badge-check"><i data-lucide="check"></i></div>
+                                <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80" alt="Portão de Chapa">
+                                <div class="model-info">
+                                    <h4>Chapa Fechada</h4>
+                                    <p>Privacidade total com acabamento liso moderno.</p>
+                                    <span class="model-price-tag">A partir de R$ 380/m²</span>
+                                </div>
+                            </div>
+
+                            <div class="card-model-select" data-model="tubo">
+                                <div class="model-badge-check"><i data-lucide="check"></i></div>
+                                <img src="https://images.unsplash.com/photo-1508873696983-2df515122519?auto=format&fit=crop&w=600&q=80" alt="Portão Tubular">
+                                <div class="model-info">
+                                    <h4>Tubular Gradil</h4>
+                                    <p>Maior ventilação e iluminação para a fachada.</p>
+                                    <span class="model-price-tag">A partir de R$ 320/m²</span>
+                                </div>
+                            </div>
+
+                            <div class="card-model-select" data-model="chapaTubo">
+                                <div class="model-badge-check"><i data-lucide="check"></i></div>
+                                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" alt="Chapa e Tubo">
+                                <div class="model-info">
+                                    <h4>Chapa & Tubo (Misto)</h4>
+                                    <p>O equilíbrio perfeito entre estilo e segurança.</p>
+                                    <span class="model-price-tag">A partir de R$ 350/m²</span>
+                                </div>
+                            </div>
+
+                            <div class="card-model-select" data-model="veneziana">
+                                <div class="model-badge-check"><i data-lucide="check"></i></div>
+                                <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80" alt="Portão Veneziana">
+                                <div class="model-info">
+                                    <h4>Veneziana</h4>
+                                    <p>Passagem de ar com privacidade preservada.</p>
+                                    <span class="model-price-tag">A partir de R$ 390/m²</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="step-nav-buttons justify-end">
+                            <button class="btn btn-primary btn-next-step" data-next="2">Próximo: Medidas <i data-lucide="arrow-right"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- PASSO 2: MEDIDAS -->
+                    <div class="config-step-pane" id="step-pane-2">
+                        <h3 class="pane-title"><i data-lucide="ruler"></i> Medidas do Seu Projeto</h3>
+                        <div class="grid-measures">
+                            <div class="measures-form">
+                                <div class="form-group">
+                                    <label for="input-largura">Largura (metros)</label>
+                                    <div class="input-with-unit">
+                                        <input type="number" id="input-largura" value="3.50" step="0.10" min="1.00" max="10.00">
+                                        <span class="unit">m</span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="input-altura">Altura (metros)</label>
+                                    <div class="input-with-unit">
+                                        <input type="number" id="input-altura" value="2.20" step="0.10" min="1.00" max="5.00">
+                                        <span class="unit">m</span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="input-quantidade">Quantidade de Portões</label>
+                                    <input type="number" id="input-quantidade" value="1" min="1" max="10">
+                                </div>
+
+                                <div class="calc-area-box">
+                                    <span>Área Calculada:</span>
+                                    <strong id="display-area-calculada">7,70 m²</strong>
+                                </div>
+                            </div>
+
+                            <div class="gate-blueprint">
+                                <span class="blueprint-dimension height-dim" id="blueprint-h-val">2.20m</span>
+                                <div class="blueprint-gate-box">
+                                    <img id="blueprint-img-preview" src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80" alt="Preview Modelo">
+                                </div>
+                                <span class="blueprint-dimension width-dim" id="blueprint-w-val">3.50m</span>
+                            </div>
+                        </div>
+
+                        <div class="step-nav-buttons">
+                            <button class="btn btn-outline-light btn-prev-step" data-prev="1"><i data-lucide="arrow-left"></i> Voltar</button>
+                            <button class="btn btn-primary btn-next-step" data-next="3">Próximo: Opcionais <i data-lucide="arrow-right"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- PASSO 3: OPCIONAIS -->
+                    <div class="config-step-pane" id="step-pane-3">
+                        <h3 class="pane-title"><i data-lucide="settings"></i> Personalização e Opcionais</h3>
+                        <div class="options-grid">
+                            
+                            <div class="option-group">
+                                <label>Tipo de Abertura</label>
+                                <div class="radio-cards" id="group-abertura">
+                                    <label class="radio-card selected">
+                                        <input type="radio" name="abertura" value="basculante" checked hidden>
+                                        <i data-lucide="maximize-2"></i>
+                                        <span>Basculante (+R$ 450)</span>
+                                    </label>
+                                    <label class="radio-card">
+                                        <input type="radio" name="abertura" value="correr" hidden>
+                                        <i data-lucide="move-horizontal"></i>
+                                        <span>De Correr (+R$ 250)</span>
+                                    </label>
+                                    <label class="radio-card">
+                                        <input type="radio" name="abertura" value="pivotante" hidden>
+                                        <i data-lucide="rotate-cw"></i>
+                                        <span>Pivotante (+R$ 350)</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="option-group">
+                                <label>Automação (Motor)</label>
+                                <div class="radio-cards" id="group-automacao">
+                                    <label class="radio-card selected">
+                                        <input type="radio" name="automacao" value="noveSegundos" checked hidden>
+                                        <i data-lucide="zap"></i>
+                                        <span>Motor Rápido 9s (+R$ 850)</span>
+                                    </label>
+                                    <label class="radio-card">
+                                        <input type="radio" name="automacao" value="dezoitoSegundos" hidden>
+                                        <i data-lucide="clock"></i>
+                                        <span>Motor Padrão 18s (+R$ 600)</span>
+                                    </label>
+                                    <label class="radio-card">
+                                        <input type="radio" name="automacao" value="nao" hidden>
+                                        <i data-lucide="slash"></i>
+                                        <span>Sem Motor (Manual)</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="option-group">
+                                <label>Tratamento Galvanizado a Fogo (+15% durabilidade praiana/externa)</label>
+                                <div class="radio-cards" id="group-galvanizado">
+                                    <label class="radio-card selected">
+                                        <input type="radio" name="galvanizado" value="sim" checked hidden>
+                                        <i data-lucide="shield"></i>
+                                        <span>Sim, Galvanizar</span>
+                                    </label>
+                                    <label class="radio-card">
+                                        <input type="radio" name="galvanizado" value="nao" hidden>
+                                        <i data-lucide="x-circle"></i>
+                                        <span>Não Galvanizado</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="option-group">
+                                <label>Social Embutido no Portão</label>
+                                <div class="radio-cards" id="group-social">
+                                    <label class="radio-card selected">
+                                        <input type="radio" name="social" value="sim" checked hidden>
+                                        <i data-lucide="user-check"></i>
+                                        <span>Sim, Incluir (+R$ 300)</span>
+                                    </label>
+                                    <label class="radio-card">
+                                        <input type="radio" name="social" value="nao" hidden>
+                                        <i data-lucide="user-x"></i>
+                                        <span>Não Incluir</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="step-nav-buttons">
+                            <button class="btn btn-outline-light btn-prev-step" data-prev="2"><i data-lucide="arrow-left"></i> Voltar</button>
+                            <button class="btn btn-primary btn-next-step" data-next="4">Próximo: Resumo <i data-lucide="arrow-right"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- PASSO 4: RESUMO DO ORÇAMENTO NA TELA -->
+                    <div class="config-step-pane" id="step-pane-4">
+                        <h3 class="pane-title"><i data-lucide="file-text"></i> Resumo da Sua Configuração</h3>
+                        
+                        <div class="summary-card-box">
+                            <div class="summary-header">
+                                <div class="summary-brand">ARTMETAL</div>
+                                <div class="summary-date" id="summary-current-date">Data: 09/08/2026</div>
+                            </div>
+
+                            <div class="summary-details-grid">
+                                <div class="summary-item">
+                                    <span>Modelo Selecionado:</span>
+                                    <strong id="sum-modelo">Portão de Chapa Fechada</strong>
+                                </div>
+                                <div class="summary-item">
+                                    <span>Medidas & Qtd:</span>
+                                    <strong id="sum-medidas">3.50m x 2.20m (1 un)</strong>
+                                </div>
+                                <div class="summary-item">
+                                    <span>Área Total:</span>
+                                    <strong id="sum-area">7,70 m²</strong>
+                                </div>
+                                <div class="summary-item">
+                                    <span>Tipo de Abertura:</span>
+                                    <strong id="sum-abertura">Basculante</strong>
+                                </div>
+                                <div class="summary-item">
+                                    <span>Automação:</span>
+                                    <strong id="sum-automacao">Motor Rápido (9s)</strong>
+                                </div>
+                                <div class="summary-item">
+                                    <span>Tratamento Galvanizado:</span>
+                                    <strong id="sum-galvanizado">Sim (Incluso)</strong>
+                                </div>
+                                <div class="summary-item">
+                                    <span>Social Embutido:</span>
+                                    <strong id="sum-social">Sim (Embutido)</strong>
+                                </div>
+                            </div>
+
+                            <div class="summary-price-breakdown">
+                                <div class="price-row">
+                                    <span>Subtotal Estrutura Base:</span>
+                                    <strong id="sum-subtotal-base">R$ 3.364,90</strong>
+                                </div>
+                                <div class="price-row">
+                                    <span>Adicionais & Acessórios:</span>
+                                    <strong id="sum-subtotal-adicionais">R$ 1.600,00</strong>
+                                </div>
+                                <div class="price-row total-row">
+                                    <span>VALOR ESTIMADO TOTAL:</span>
+                                    <strong class="highlight-price" id="sum-total-final">R$ 4.964,90</strong>
+                                </div>
+                            </div>
+
+                            <p class="disclaimer-text">
+                                <i data-lucide="info"></i>
+                                Este valor é uma estimativa e poderá ser alterado após avaliação técnica do projeto.
+                            </p>
+                        </div>
+
+                        <div class="summary-actions-bar">
+                            <button class="btn btn-outline-dark" id="btn-print-quote">
+                                <i data-lucide="printer"></i> IMPRIMIR ORÇAMENTO
+                            </button>
+                        </div>
+
+                        <div class="step-nav-buttons">
+                            <button class="btn btn-outline-light btn-prev-step" data-prev="3"><i data-lucide="arrow-left"></i> Voltar</button>
+                            <button class="btn btn-primary btn-next-step" data-next="5">Finalizar Envio <i data-lucide="arrow-right"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- PASSO 5: FORMULÁRIO DO CLIENTE & ENVIO -->
+                    <div class="config-step-pane" id="step-pane-5">
+                        <h3 class="pane-title"><i data-lucide="send"></i> Informe seus Dados para Validação</h3>
+                        
+                        <form id="form-configurator-lead">
+                            <div class="grid-2-form">
+                                <div class="form-group">
+                                    <label for="lead-nome">Nome Completo *</label>
+                                    <input type="text" id="lead-nome" placeholder="Digite seu nome">
+                                </div>
+                                <div class="form-group">
+                                    <label for="lead-whatsapp">WhatsApp *</label>
+                                    <input type="tel" id="lead-whatsapp" placeholder="(11) 99999-9999">
+                                </div>
+                            </div>
+
+                            <div class="grid-2-form">
+                                <div class="form-group">
+                                    <label for="lead-email">E-mail (Opcional)</label>
+                                    <input type="email" id="lead-email" placeholder="seuemail@email.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="lead-cidade">Cidade / Bairro *</label>
+                                    <input type="text" id="lead-cidade" placeholder="Digite sua cidade/bairro">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="lead-observacoes">Observações sobre o projeto (Opcional)</label>
+                                <textarea id="lead-observacoes" rows="3" placeholder="Digite alguma observação sobre seu projeto..."></textarea>
+                            </div>
+
+                            <div class="margin-top">
+                                <button type="submit" class="btn btn-primary btn-block btn-lg btn-whatsapp-submit">
+                                    <i data-lucide="message-square"></i> SOLICITAR ORÇAMENTO NO WHATSAPP
+                                </button>
+                            </div>
+                        </form>
+
+                        <div class="step-nav-buttons">
+                            <button class="btn btn-outline-light btn-prev-step" data-prev="4"><i data-lucide="arrow-left"></i> Voltar para Resumo</button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Sidebar do Configurador com Resumo Lateral -->
+                <aside class="config-sidebar">
+                    <div class="sidebar-card">
+                        <h4>Estimativa Parcial</h4>
+                        <div class="sidebar-model-preview">
+                            <img id="sidebar-img-thumb" src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80" alt="Thumb Modelo">
+                            <div>
+                                <strong id="sidebar-model-title">Portão de Chapa</strong>
+                                <p id="sidebar-measures-info">3.50m x 2.20m (1 un)</p>
+                            </div>
+                        </div>
+
+                        <hr class="sidebar-divider">
+
+                        <div class="sidebar-price-box">
+                            <span>Valor Estimado:</span>
+                            <div class="live-price" id="sidebar-live-price">R$ 4.964,90</div>
+                        </div>
+
+                        <ul class="sidebar-features-list">
+                            <li><i data-lucide="check" style="width:14px;"></i> Fabricação Própria</li>
+                            <li><i data-lucide="check" style="width:14px;"></i> Garantia Estrutural</li>
+                            <li><i data-lucide="check" style="width:14px;"></i> Instalação Especializada</li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TÓPICOS INDIVIDUAIS DE CADA CATEGORIA      -->
+    <!-- ========================================== -->
+
+    <!-- CATEGORIA 2 — VIDRAÇARIA -->
+    <section id="servico-vidracaria" class="section service-detail-section no-print">
+        <div class="container">
+            <div class="service-split-layout">
+                <div class="service-split-img">
+                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80" alt="Serviço de Vidraçaria Artmetal">
+                </div>
+                <div class="service-split-content">
+                    <span class="section-tag">CATEGORIA</span>
+                    <h2>Vidraçaria</h2>
+                    <h3>Soluções em vidro para ambientes modernos, funcionais e sofisticados.</h3>
+                    <ul class="service-feature-list">
+                        <li><i data-lucide="check-circle-2"></i> Vidros temperados e laminados</li>
+                        <li><i data-lucide="check-circle-2"></i> Portas de vidro</li>
+                        <li><i data-lucide="check-circle-2"></i> Janelas e basculantes</li>
+                        <li><i data-lucide="check-circle-2"></i> Fechamentos de ambientes</li>
+                        <li><i data-lucide="check-circle-2"></i> Divisórias corporativas e residenciais</li>
+                        <li><i data-lucide="check-circle-2"></i> Projetos personalizados em vidro</li>
+                    </ul>
+                    <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20Artmetal!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20um%20servi%C3%A7o%20de%20vidra%C3%A7aria." target="_blank" class="btn btn-primary btn-whatsapp-btn">
+                        <i data-lucide="message-square"></i> SOLICITAR ORÇAMENTO
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CATEGORIA 3 — BOX DE BANHEIRO -->
+    <section id="servico-box" class="section service-detail-section bg-light no-print">
+        <div class="container">
+            <div class="service-split-layout reverse">
+                <div class="service-split-img">
+                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80" alt="Box de Banheiro Artmetal">
+                </div>
+                <div class="service-split-content">
+                    <span class="section-tag">CATEGORIA</span>
+                    <h2>Box de Banheiro</h2>
+                    <h3>Acabamento, segurança e elegância para o seu banheiro.</h3>
+                    <ul class="service-feature-list">
+                        <li><i data-lucide="check-circle-2"></i> Box tradicional de correr ou abrir</li>
+                        <li><i data-lucide="check-circle-2"></i> Box elegante até o teto (piso ao teto)</li>
+                        <li><i data-lucide="check-circle-2"></i> Vidro temperado de alta resistência</li>
+                        <li><i data-lucide="check-circle-2"></i> Diferentes acabamentos de perfis e roldanas</li>
+                        <li><i data-lucide="check-circle-2"></i> Projetos totalmente sob medida</li>
+                    </ul>
+                    <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20Artmetal!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20box%20de%20banheiro." target="_blank" class="btn btn-primary btn-whatsapp-btn">
+                        <i data-lucide="message-square"></i> SOLICITAR ORÇAMENTO
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CATEGORIA 4 — CORRIMÃOS -->
+    <section id="servico-corrimaos" class="section service-detail-section no-print">
+        <div class="container">
+            <div class="service-split-layout">
+                <div class="service-split-img">
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Corrimãos Artmetal">
+                </div>
+                <div class="service-split-content">
+                    <span class="section-tag">CATEGORIA</span>
+                    <h2>Corrimãos</h2>
+                    <h3>Mais segurança e acabamento para escadas e ambientes internos e externos.</h3>
+                    <ul class="service-feature-list">
+                        <li><i data-lucide="check-circle-2"></i> Corrimãos metálicos com pintura eletrostática</li>
+                        <li><i data-lucide="check-circle-2"></i> Corrimãos nobres em aço inox</li>
+                        <li><i data-lucide="check-circle-2"></i> Corrimãos modernos integrados com vidro</li>
+                        <li><i data-lucide="check-circle-2"></i> Modelos totalmente personalizados para seu espaço</li>
+                    </ul>
+                    <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20Artmetal!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20corrim%C3%A3o." target="_blank" class="btn btn-primary btn-whatsapp-btn">
+                        <i data-lucide="message-square"></i> ORÇAR CORRIMÃO
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CATEGORIA 5 — GUARDA-CORPOS -->
+    <section id="servico-guarda-corpos" class="section service-detail-section bg-light no-print">
+        <div class="container">
+            <div class="service-split-layout reverse">
+                <div class="service-split-img">
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Guarda-Corpos Artmetal">
+                </div>
+                <div class="service-split-content">
+                    <span class="section-tag">CATEGORIA</span>
+                    <h2>Guarda-Corpos</h2>
+                    <h3>Proteção e design para escadas, sacadas e áreas externas.</h3>
+                    <ul class="service-feature-list">
+                        <li><i data-lucide="check-circle-2"></i> Guarda-corpo metálico com gradil reforçado</li>
+                        <li><i data-lucide="check-circle-2"></i> Guarda-corpo panorâmico com vidro temperado</li>
+                        <li><i data-lucide="check-circle-2"></i> Guarda-corpo para escadas e mezaninos</li>
+                        <li><i data-lucide="check-circle-2"></i> Guarda-corpo para sacadas residenciais e prediais</li>
+                        <li><i data-lucide="check-circle-2"></i> Projetos exclusivos sob medida</li>
+                    </ul>
+                    <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20Artmetal!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20guarda-corpo." target="_blank" class="btn btn-primary btn-whatsapp-btn">
+                        <i data-lucide="message-square"></i> SOLICITAR ORÇAMENTO
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CATEGORIA 6 — SACADAS E VARANDAS -->
+    <section id="servico-sacadas" class="section service-detail-section no-print">
+        <div class="container">
+            <div class="service-split-layout">
+                <div class="service-split-img">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Sacadas e Varandas Artmetal">
+                </div>
+                <div class="service-split-content">
+                    <span class="section-tag">CATEGORIA</span>
+                    <h2>Sacadas e Varandas</h2>
+                    <h3>Soluções personalizadas para transformar e proteger seus espaços externos.</h3>
+                    <ul class="service-feature-list">
+                        <li><i data-lucide="check-circle-2"></i> Fechamentos de sacadas e varandas</li>
+                        <li><i data-lucide="check-circle-2"></i> Guarda-corpos panorâmicos</li>
+                        <li><i data-lucide="check-circle-2"></i> Estruturas metálicas de cobertura e suporte</li>
+                        <li><i data-lucide="check-circle-2"></i> Vidraçaria técnica de alta durabilidade</li>
+                        <li><i data-lucide="check-circle-2"></i> Projetos sob medida para imóveis residenciais e comerciais</li>
+                    </ul>
+                    <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20Artmetal!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20uma%20solu%C3%A7%C3%A3o%20para%20minha%20sacada%2Fvaranda." target="_blank" class="btn btn-primary btn-whatsapp-btn">
+                        <i data-lucide="message-square"></i> FALAR COM ESPECIALISTA
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CATEGORIA 7 — GRADES DE PROTEÇÃO -->
+    <section id="servico-grades" class="section service-detail-section bg-light no-print">
+        <div class="container">
+            <div class="service-split-layout reverse">
+                <div class="service-split-img">
+                    <img src="https://images.unsplash.com/photo-1508873696983-2df515122519?auto=format&fit=crop&w=800&q=80" alt="Grades de Proteção Artmetal">
+                </div>
+                <div class="service-split-content">
+                    <span class="section-tag">CATEGORIA</span>
+                    <h2>Grades de Proteção</h2>
+                    <h3>Segurança e resistência para residências, empresas e estabelecimentos comerciais.</h3>
+                    <ul class="service-feature-list">
+                        <li><i data-lucide="check-circle-2"></i> Grades de proteção para janelas</li>
+                        <li><i data-lucide="check-circle-2"></i> Grades de elevação para muros e perímetros</li>
+                        <li><i data-lucide="check-circle-2"></i> Grades residenciais decorativas e de reforço</li>
+                        <li><i data-lucide="check-circle-2"></i> Grades para comércios e estabelecimentos</li>
+                        <li><i data-lucide="check-circle-2"></i> Modelos totalmente personalizados</li>
+                    </ul>
+                    <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20Artmetal!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20grades%20de%20prote%C3%A7%C3%A3o." target="_blank" class="btn btn-primary btn-whatsapp-btn">
+                        <i data-lucide="message-square"></i> SOLICITAR ORÇAMENTO
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CATEGORIA 8 — ESTRUTURAS METÁLICAS -->
+    <section id="servico-estruturas" class="section service-detail-section no-print">
+        <div class="container">
+            <div class="service-split-layout">
+                <div class="service-split-img">
+                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" alt="Estruturas Metálicas Artmetal">
+                </div>
+                <div class="service-split-content">
+                    <span class="section-tag">CATEGORIA</span>
+                    <h2>Estruturas Metálicas</h2>
+                    <h3>Projetos metálicos desenvolvidos de acordo com a necessidade de cada espaço.</h3>
+                    <ul class="service-feature-list">
+                        <li><i data-lucide="check-circle-2"></i> Coberturas residenciais e comerciais</li>
+                        <li><i data-lucide="check-circle-2"></i> Mezaninos metálicos de alta capacidade</li>
+                        <li><i data-lucide="check-circle-2"></i> Estruturas metálicas diversas</li>
+                        <li><i data-lucide="check-circle-2"></i> Projetos comerciais sob demanda</li>
+                        <li><i data-lucide="check-circle-2"></i> Projetos industriais de grande porte</li>
+                        <li><i data-lucide="check-circle-2"></i> Soluções totalmente sob medida</li>
+                    </ul>
+                    <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20Artmetal!%20Gostaria%20de%20falar%20com%20a%20Artmetal%20sobre%20estruturas%20met%C3%A1licas." target="_blank" class="btn btn-primary btn-whatsapp-btn">
+                        <i data-lucide="message-square"></i> FALAR COM A ARTMETAL
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CATEGORIA 9 — PROJETOS PERSONALIZADOS -->
+    <section id="servico-personalizados" class="section service-detail-section bg-dark text-white service-premium-box no-print">
+        <div class="container">
+            <div class="service-split-layout reverse">
+                <div class="service-split-img">
+                    <img src="https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=80" alt="Projetos Personalizados Artmetal">
+                </div>
+                <div class="service-split-content">
+                    <span class="section-tag section-tag-light">EXCLUSIVIDADE</span>
+                    <h2 class="text-white">Projetos Personalizados</h2>
+                    <p class="hero-subtitle">Tem uma ideia diferente? Desenvolvemos soluções sob medida para transformar sua necessidade em um projeto real.</p>
+                    <ul class="service-feature-list feature-list-light">
+                        <li><i data-lucide="check-circle-2"></i> Execução detalhada conforme planta ou desenho do arquiteto</li>
+                        <li><i data-lucide="check-circle-2"></i> Atendimento consultivo especializado do projeto ao acabamento</li>
+                        <li><i data-lucide="check-circle-2"></i> União de aço, inox e vidro em peça única</li>
+                        <li><i data-lucide="check-circle-2"></i> Materiais certificados de durabilidade máxima</li>
+                    </ul>
+                    <a href="https://wa.me/5511989185359?text=Ol%C3%A1%2C%20Artmetal!%20Tenho%20um%20projeto%20personalizado%20e%20gostaria%20de%20conversar%20com%20um%20especialista." target="_blank" class="btn btn-primary btn-lg btn-whatsapp-btn margin-top">
+                        <i data-lucide="message-square"></i> FALAR COM UM ESPECIALISTA
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMO FUNCIONA -->
+    <section id="como-funciona" class="section text-center">
+        <div class="container">
+            <span class="section-tag">PASSO A PASSO</span>
+            <h2 class="section-title">Como Funciona</h2>
+            <p class="section-desc">Entenda nosso processo de fabricação e instalação do seu projeto.</p>
+        </div>
+    </section>
+
+    <!-- PROJETOS -->
+    <section id="projetos" class="section bg-light text-center">
+        <div class="container">
+            <span class="section-tag">NOSSO PORTFÓLIO</span>
+            <h2 class="section-title">Projetos Entregues</h2>
+            <p class="section-desc">Confira alguns dos nossos últimos trabalhos executados.</p>
+        </div>
+    </section>
+
+    <!-- Barra Mobile Fixa para Preço -->
+    <div class="mobile-price-bar">
+        <div class="mobile-price-info">
+            <span>Estimativa Atual:</span>
+            <strong id="mobile-live-price">R$ 4.964,90</strong>
+        </div>
+        <button class="btn btn-primary btn-sm" onclick="irParaEtapa(4)">VER RESUMO</button>
+    </div>
+
+    <!-- RODAPÉ COMPLETO DADOS FICTÍCIOS MANTIDOS -->
+    <footer class="footer bg-dark" id="contato">
+        <div class="container text-center">
+            <p>© <span id="current-year">2026</span> Artmetal Serralheria. Todos os direitos reservados.</p>
+            <p class="margin-top text-gray">Atendimento: (11) 99999-9999 | contato@artmetalserralheria.com.br</p>
+        </div>
+    </footer>
+
+    <!-- ========================================== -->
+    <!-- ÁREA DE IMPRESSÃO INDEPENDENTE (A4 1 PÁGINA) -->
+    <!-- ========================================== -->
+    <div id="printable-summary" class="print-only">
+        <div class="print-header">
+            <div class="print-brand-title">ARTMETAL</div>
+            <div class="print-sub-title">ORÇAMENTO / ESTIMATIVA TÉCNICA</div>
+            <div class="print-date" id="print-date-display">Data: --/--/----</div>
+        </div>
+
+        <div class="print-client-box">
+            <h4>DADOS DO CLIENTE</h4>
+            <div class="print-client-grid">
+                <div><strong>Nome:</strong> <span id="print-client-name">Não informado</span></div>
+                <div><strong>WhatsApp:</strong> <span id="print-client-phone">Não informado</span></div>
+                <div><strong>E-mail:</strong> <span id="print-client-email">Não informado</span></div>
+                <div><strong>Cidade/Bairro:</strong> <span id="print-client-city">Não informado</span></div>
+            </div>
+        </div>
+
+        <div class="print-project-box">
+            <h4>PROJETO E ESPECIFICAÇÕES</h4>
+            <div class="print-project-grid">
+                <div class="print-project-info">
+                    <p><strong>Modelo:</strong> <span id="print-model-name">Portão de Chapa Fechada</span></p>
+                    <p><strong>Dimensões:</strong> <span id="print-measures">3.50m x 2.20m</span></p>
+                    <p><strong>Quantidade:</strong> <span id="print-quantity">1 un</span></p>
+                    <p><strong>Área Total:</strong> <span id="print-total-area">7.70 m²</span></p>
+                </div>
+                <div class="print-project-img-wrapper">
+                    <img id="print-gate-image" src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80" alt="Preview Modelo">
+                </div>
+            </div>
+        </div>
+
+        <div class="print-config-box">
+            <h4>CONFIGURAÇÕES SELECIONADAS</h4>
+            <div class="print-config-grid">
+                <div><strong>Tipo de Abertura:</strong> <span id="print-opening-type">Basculante</span></div>
+                <div><strong>Automação:</strong> <span id="print-automation-type">Motor Rápido (9s)</span></div>
+                <div><strong>Galvanização a Fogo:</strong> <span id="print-galvanized-type">Sim (Incluso)</span></div>
+                <div><strong>Social Embutido:</strong> <span id="print-social-type">Sim (Embutido)</span></div>
+            </div>
+        </div>
+
+        <div class="print-total-box">
+            <div class="print-total-row">
+                <span>VALOR ESTIMADO TOTAL:</span>
+                <strong id="print-total-price">R$ 0,00</strong>
+            </div>
+        </div>
+
+        <div class="print-footer-note">
+            <p><strong>Observação:</strong> Este valor é uma estimativa e poderá ser alterado após avaliação técnica do projeto no local de instalação.</p>
+            <p>ARTMETAL SERRALHERIA • Contato: (11) 99999-9999 • contato@artmetalserralheria.com.br</p>
+        </div>
+    </div>
+
+    <!-- Scripts da Aplicação -->
+    <script src="js/script.js"></script>
+</body>
+</html>

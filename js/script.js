@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
             dezoitoSegundos: 600
         },
         galvanizado: {
-            sim: 0.15, // Adds 15% to base subtotal
+            sim: 0.15, // Adiciona 15% ao subtotal base
             nao: 0
         },
         social: {

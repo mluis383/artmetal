@@ -15,8 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         abertura: {
             basculante: 450, 
             correr: 250,
-            pivotante: 350,
-            social: 0
+            pivotante: 350
         },
         automacao: {
             nao: 0,
@@ -24,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
             dezoitoSegundos: 600
         },
         galvanizado: {
-            sim: 0.15, 
+            sim: 0.15, // Adds 15% to base subtotal
             nao: 0
         },
         social: {
@@ -131,12 +130,29 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    function calcularOrcamento() {
+    function validarEObterMedidas() {
         if (!inputLargura || !inputAltura || !inputQuantidade) return;
 
-        projeto.largura = parseFloat(inputLargura.value) || 0;
-        projeto.altura = parseFloat(inputAltura.value) || 0;
-        projeto.quantidade = parseInt(inputQuantidade.value, 10) || 1;
+        let larg = parseFloat(inputLargura.value);
+        let alt = parseFloat(inputAltura.value);
+        let qtd = parseInt(inputQuantidade.value, 10);
+
+        if (isNaN(larg) || larg < 1.0) larg = 1.0;
+        if (larg > 10.0) larg = 10.0;
+
+        if (isNaN(alt) || alt < 1.0) alt = 1.0;
+        if (alt > 5.0) alt = 5.0;
+
+        if (isNaN(qtd) || qtd < 1) qtd = 1;
+        if (qtd > 10) qtd = 10;
+
+        projeto.largura = larg;
+        projeto.altura = alt;
+        projeto.quantidade = qtd;
+    }
+
+    function calcularOrcamento() {
+        validarEObterMedidas();
 
         projeto.areaTotal = (projeto.largura * projeto.altura) * projeto.quantidade;
 
@@ -183,7 +199,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     document.querySelectorAll('.card-model-select').forEach(card => {
-        card.addEventListener('click', () => {
+        const selecionarCard = () => {
             document.querySelectorAll('.card-model-select').forEach(c => c.classList.remove('selected'));
             card.classList.add('selected');
 
@@ -202,28 +218,54 @@ document.addEventListener('DOMContentLoaded', () => {
             if (sidebarModelTitle) sidebarModelTitle.innerText = titulos[projeto.modelo] || "Portão Personalizado";
 
             calcularOrcamento();
+        };
+
+        card.addEventListener('click', selecionarCard);
+        card.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                selecionarCard();
+            }
         });
     });
 
-    if (inputLargura) inputLargura.addEventListener('input', calcularOrcamento);
-    if (inputAltura) inputAltura.addEventListener('input', calcularOrcamento);
-    if (inputQuantidade) inputQuantidade.addEventListener('input', calcularOrcamento);
+    if (inputLargura) {
+        inputLargura.addEventListener('input', calcularOrcamento);
+        inputLargura.addEventListener('change', calcularOrcamento);
+    }
+    if (inputAltura) {
+        inputAltura.addEventListener('input', calcularOrcamento);
+        inputAltura.addEventListener('change', calcularOrcamento);
+    }
+    if (inputQuantidade) {
+        inputQuantidade.addEventListener('input', calcularOrcamento);
+        inputQuantidade.addEventListener('change', calcularOrcamento);
+    }
 
     function escutarGrupoRadio(idGrupo, chaveProjeto) {
         const container = document.getElementById(idGrupo);
         if (!container) return;
 
         container.querySelectorAll('.radio-card').forEach(card => {
-            card.addEventListener('click', () => {
+            const radio = card.querySelector('input[type="radio"]');
+
+            const marcarOpcao = () => {
                 container.querySelectorAll('.radio-card').forEach(c => c.classList.remove('selected'));
                 card.classList.add('selected');
 
-                const radio = card.querySelector('input[type="radio"]');
                 if (radio) {
                     radio.checked = true;
                     projeto[chaveProjeto] = radio.value;
                 }
                 calcularOrcamento();
+            };
+
+            card.addEventListener('click', marcarOpcao);
+            card.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    marcarOpcao();
+                }
             });
         });
     }
@@ -240,7 +282,7 @@ document.addEventListener('DOMContentLoaded', () => {
             chapaTubo: "Chapa e Tubo Misto",
             veneziana: "Portão Veneziana"
         };
-        const nomesAbertura = { basculante: "Basculante", correr: "De Correr", pivotante: "Pivotante", social: "Social Apenas" };
+        const nomesAbertura = { basculante: "Basculante", correr: "De Correr", pivotante: "Pivotante" };
         const nomesAutomacao = { nao: "Manual (Sem Motor)", noveSegundos: "Motor Rápido (9s)", dezoitoSegundos: "Motor Padrão (18s)" };
 
         const elemModelo = document.getElementById('sum-modelo');
@@ -252,21 +294,41 @@ document.addEventListener('DOMContentLoaded', () => {
         const elemSocial = document.getElementById('sum-social');
         const elemTotal = document.getElementById('sum-total-final');
 
+        const textoGalvanizado = projeto.galvanizado === 'sim' ? "Sim (+15% ao subtotal base)" : "Não";
+
         if (elemModelo) elemModelo.innerText = nomesModelos[projeto.modelo] || "Modelo Especial";
         if (elemMedidas) elemMedidas.innerText = `${projeto.largura.toFixed(2)}m x ${projeto.altura.toFixed(2)}m (${projeto.quantidade} un)`;
         if (elemArea) elemArea.innerText = `${projeto.areaTotal.toFixed(2).replace('.', ',')} m²`;
         if (elemAbertura) elemAbertura.innerText = nomesAbertura[projeto.abertura] || projeto.abertura;
         if (elemAutomacao) elemAutomacao.innerText = nomesAutomacao[projeto.automacao] || projeto.automacao;
-        if (elemGalv) elemGalv.innerText = projeto.galvanizado === 'sim' ? "Sim (Incluso)" : "Não";
+        if (elemGalv) elemGalv.innerText = textoGalvanizado;
         if (elemSocial) elemSocial.innerText = projeto.social === 'sim' ? "Sim (Embutido)" : "Não";
 
         if (elemTotal) elemTotal.innerText = projeto.valorCalculado.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 
         const hoje = new Date();
+        const dataFormatada = hoje.toLocaleDateString('pt-BR');
         const elemData = document.getElementById('summary-current-date');
         const elemDataPrint = document.getElementById('print-date-display');
-        if (elemData) elemData.innerText = `Data: ${hoje.toLocaleDateString('pt-BR')}`;
-        if (elemDataPrint) elemDataPrint.innerText = `Data: ${hoje.toLocaleDateString('pt-BR')}`;
+        if (elemData) elemData.innerText = `Data: ${dataFormatada}`;
+        if (elemDataPrint) elemDataPrint.innerText = `Data: ${dataFormatada}`;
+
+        // Atualização dos campos exclusivos da Impressão
+        const printModelo = document.getElementById('print-sum-modelo');
+        const printMedidas = document.getElementById('print-sum-medidas');
+        const printArea = document.getElementById('print-sum-area');
+        const printAbertura = document.getElementById('print-sum-abertura');
+        const printAutomacao = document.getElementById('print-sum-automacao');
+        const printGalv = document.getElementById('print-sum-galvanizado');
+        const printSocial = document.getElementById('print-sum-social');
+
+        if (printModelo) printModelo.innerText = nomesModelos[projeto.modelo] || "Modelo Especial";
+        if (printMedidas) printMedidas.innerText = `${projeto.largura.toFixed(2)}m x ${projeto.altura.toFixed(2)}m (${projeto.quantidade} un)`;
+        if (printArea) printArea.innerText = `${projeto.areaTotal.toFixed(2).replace('.', ',')} m²`;
+        if (printAbertura) printAbertura.innerText = nomesAbertura[projeto.abertura] || projeto.abertura;
+        if (printAutomacao) printAutomacao.innerText = nomesAutomacao[projeto.automacao] || projeto.automacao;
+        if (printGalv) printGalv.innerText = textoGalvanizado;
+        if (printSocial) printSocial.innerText = projeto.social === 'sim' ? "Sim (Embutido)" : "Não";
 
         const imgPrint = document.getElementById('print-gate-image');
         if (imgPrint) {
@@ -310,7 +372,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const mensagem = gerarMensagemWhatsApp();
             const urlWhatsApp = `https://wa.me/${whatsappArtmetal}?text=${encodeURIComponent(mensagem)}`;
 
-            window.open(urlWhatsApp, '_blank');
+            window.open(urlWhatsApp, '_blank', 'noopener,noreferrer');
         });
     }
 
@@ -329,7 +391,7 @@ Olá, equipe Artmetal! Montei meu portão no site e gostaria de solicitar a vali
 - *Área Total:* ${projeto.areaTotal.toFixed(2)} m²
 - *Abertura:* ${projeto.abertura}
 - *Motor/Automação:* ${projeto.automacao}
-- *Galvanização:* ${projeto.galvanizado === 'sim' ? 'Sim' : 'Não'}
+- *Galvanização:* ${projeto.galvanizado === 'sim' ? 'Sim (+15%)' : 'Não'}
 - *Social Embutido:* ${projeto.social === 'sim' ? 'Sim' : 'Não'}
 
 *VALOR ESTIMADO:* ${valorFormatado}
@@ -344,6 +406,7 @@ Olá, equipe Artmetal! Montei meu portão no site e gostaria de solicitar a vali
 Aguardo o contato para combinarmos a avaliação técnica!`;
     }
 
+    // Controle de Navegação Mobile & Dropdown
     const hamburgerBtn = document.getElementById('hamburger-btn');
     const navMenu = document.getElementById('nav-menu');
     const dropdownToggle = document.getElementById('dropdown-servicos-toggle');
@@ -351,7 +414,8 @@ Aguardo o contato para combinarmos a avaliação técnica!`;
 
     if (hamburgerBtn && navMenu) {
         hamburgerBtn.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
+            const foiAberto = navMenu.classList.toggle('active');
+            hamburgerBtn.setAttribute('aria-expanded', foiAberto ? 'true' : 'false');
         });
     }
 
@@ -359,22 +423,30 @@ Aguardo o contato para combinarmos a avaliação técnica!`;
         dropdownToggle.addEventListener('click', (e) => {
             if (window.innerWidth <= 768) {
                 e.preventDefault();
-                dropdownItem.classList.toggle('open');
+                const foiAberto = dropdownItem.classList.toggle('open');
+                dropdownToggle.setAttribute('aria-expanded', foiAberto ? 'true' : 'false');
             }
         });
     }
 
     document.querySelectorAll('.nav-link, .dropdown-link').forEach(link => {
-        link.addEventListener('click', () => {
+        link.addEventListener('click', (e) => {
             if (window.innerWidth <= 768 && link.classList.contains('dropdown-toggle')) return;
-            if (navMenu) navMenu.classList.remove('active');
-            if (dropdownItem) dropdownItem.classList.remove('open');
+            if (navMenu) {
+                navMenu.classList.remove('active');
+                if (hamburgerBtn) hamburgerBtn.setAttribute('aria-expanded', 'false');
+            }
+            if (dropdownItem) {
+                dropdownItem.classList.remove('open');
+                if (dropdownToggle) dropdownToggle.setAttribute('aria-expanded', 'false');
+            }
         });
     });
 
     const currentYearElem = document.getElementById('current-year');
     if (currentYearElem) currentYearElem.innerText = new Date().getFullYear();
 
+    // Inicialização do cálculo para sincronizar com o carregamento da página
     calcularOrcamento();
 
     if (window.lucide) {

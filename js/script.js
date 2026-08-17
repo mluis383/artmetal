@@ -1,13 +1,10 @@
 /**
  * ARTMETAL - Serralheria & Soluções sob Medida
- * Script Principal, Configurador Digital, Impressão A4 e Navegação de Serviços
+ * Script Principal, Configurador Digital e Impressão A4
  */
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    // ==========================================
-    // 1. ESTRUTURA CENTRAL DE PREÇOS FICTÍCIOS
-    // ==========================================
     const configuracaoPrecos = {
         modelos: {
             chapa: 380,      
@@ -43,11 +40,8 @@ document.addEventListener('DOMContentLoaded', () => {
         veneziana: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80"
     };
 
-    const whatsappArtmetal = "5511989185359";
+    const whatsappArtmetal = "5511975335113";
 
-    // ==========================================
-    // 2. ESTADO CENTRAL DO CONFIGURADOR
-    // ==========================================
     const projeto = {
         etapaAtual: 1,
         modelo: 'chapa',
@@ -69,16 +63,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // ==========================================
-    // 3. SELETORES DO DOM
-    // ==========================================
     const inputLargura = document.getElementById('input-largura');
     const inputAltura = document.getElementById('input-altura');
     const inputQuantidade = document.getElementById('input-quantidade');
 
     const displayAreaCalculada = document.getElementById('display-area-calculada');
     const displayLivePriceSidebar = document.getElementById('sidebar-live-price');
-    const displayLivePriceMobile = document.getElementById('mobile-live-price');
 
     const blueprintWVal = document.getElementById('blueprint-w-val');
     const blueprintHVal = document.getElementById('blueprint-h-val');
@@ -93,9 +83,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const inputLeadCidade = document.getElementById('lead-cidade');
     const inputLeadObservacoes = document.getElementById('lead-observacoes');
 
-    // ==========================================
-    // 4. LÓGICA DO STEPPER DO CONFIGURADOR
-    // ==========================================
     window.irParaEtapa = function(etapa) {
         if (etapa < 1 || etapa > 5) return;
 
@@ -144,9 +131,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // ==========================================
-    // 5. CÁLCULO DE ORÇAMENTO EM TEMPO REAL
-    // ==========================================
     function calcularOrcamento() {
         if (!inputLargura || !inputAltura || !inputQuantidade) return;
 
@@ -179,7 +163,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (displayAreaCalculada) displayAreaCalculada.innerText = `${projeto.areaTotal.toFixed(2).replace('.', ',')} m²`;
         if (displayLivePriceSidebar) displayLivePriceSidebar.innerText = valorFormatado;
-        if (displayLivePriceMobile) displayLivePriceMobile.innerText = valorFormatado;
 
         if (blueprintWVal) blueprintWVal.innerText = `${projeto.largura.toFixed(2)}m`;
         if (blueprintHVal) blueprintHVal.innerText = `${projeto.altura.toFixed(2)}m`;
@@ -199,15 +182,6 @@ document.addEventListener('DOMContentLoaded', () => {
         projeto.cliente.observacoes = inputLeadObservacoes ? inputLeadObservacoes.value.trim() : "";
     }
 
-    if (inputLeadNome) inputLeadNome.addEventListener('input', atualizarDadosCliente);
-    if (inputLeadWhatsapp) inputLeadWhatsapp.addEventListener('input', atualizarDadosCliente);
-    if (inputLeadEmail) inputLeadEmail.addEventListener('input', atualizarDadosCliente);
-    if (inputLeadCidade) inputLeadCidade.addEventListener('input', atualizarDadosCliente);
-    if (inputLeadObservacoes) inputLeadObservacoes.addEventListener('input', atualizarDadosCliente);
-
-    // ==========================================
-    // 6. SELEÇÃO DE MODELOS & INPUTS
-    // ==========================================
     document.querySelectorAll('.card-model-select').forEach(card => {
         card.addEventListener('click', () => {
             document.querySelectorAll('.card-model-select').forEach(c => c.classList.remove('selected'));
@@ -259,9 +233,6 @@ document.addEventListener('DOMContentLoaded', () => {
     escutarGrupoRadio('group-galvanizado', 'galvanizado');
     escutarGrupoRadio('group-social', 'social');
 
-    // ==========================================
-    // 7. ATUALIZAÇÃO DO RESUMO & IMPRESSÃO
-    // ==========================================
     function atualizarTelaResumo() {
         const nomesModelos = {
             chapa: "Portão de Chapa Fechada",
@@ -323,9 +294,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ==========================================
-    // 8. ENVIO FORMULÁRIO LEADS / WHATSAPP
-    // ==========================================
     const formLead = document.getElementById('form-configurator-lead');
     if (formLead) {
         formLead.addEventListener('submit', (e) => {
@@ -376,22 +344,17 @@ Olá, equipe Artmetal! Montei meu portão no site e gostaria de solicitar a vali
 Aguardo o contato para combinarmos a avaliação técnica!`;
     }
 
-    // ==========================================
-    // 9. NAVEGAÇÃO, MENU RESPONSIVO E DROPDOWN
-    // ==========================================
     const hamburgerBtn = document.getElementById('hamburger-btn');
     const navMenu = document.getElementById('nav-menu');
     const dropdownToggle = document.getElementById('dropdown-servicos-toggle');
     const dropdownItem = document.getElementById('dropdown-servicos-item');
 
-    // Toggle Menu Mobile Hamburger
     if (hamburgerBtn && navMenu) {
         hamburgerBtn.addEventListener('click', () => {
             navMenu.classList.toggle('active');
         });
     }
 
-    // Toggle Dropdown Serviços no Celular
     if (dropdownToggle && dropdownItem) {
         dropdownToggle.addEventListener('click', (e) => {
             if (window.innerWidth <= 768) {
@@ -401,33 +364,19 @@ Aguardo o contato para combinarmos a avaliação técnica!`;
         });
     }
 
-    // Fechar menu mobile ao clicar em qualquer item do menu ou dropdown
     document.querySelectorAll('.nav-link, .dropdown-link').forEach(link => {
-        link.addEventListener('click', (e) => {
-            // Se for o toggle do dropdown no celular, não fecha o menu ainda
-            if (window.innerWidth <= 768 && link.classList.contains('dropdown-toggle')) {
-                return;
-            }
-
-            if (navMenu) {
-                navMenu.classList.remove('active');
-            }
-            if (dropdownItem) {
-                dropdownItem.classList.remove('open');
-            }
+        link.addEventListener('click', () => {
+            if (window.innerWidth <= 768 && link.classList.contains('dropdown-toggle')) return;
+            if (navMenu) navMenu.classList.remove('active');
+            if (dropdownItem) dropdownItem.classList.remove('open');
         });
     });
 
-    // Ano Atual no Rodapé
     const currentYearElem = document.getElementById('current-year');
-    if (currentYearElem) {
-        currentYearElem.innerText = new Date().getFullYear();
-    }
+    if (currentYearElem) currentYearElem.innerText = new Date().getFullYear();
 
-    // Inicialização do cálculo
     calcularOrcamento();
 
-    // Inicialização dos ícones Lucide
     if (window.lucide) {
         window.lucide.createIcons();
     }

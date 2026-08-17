@@ -39,20 +39,20 @@
     <!-- ========================================== -->
     <header class="header" id="header">
         <div class="container header-container">
-            <a href="#inicio" class="logo">
-                <img src="artmetal/assets/logo/artmetal-logo.png" alt="Artmetal - Serralheria e Soluções em Metal" class="header-logo-img">
+            <a href="#inicio" class="logo" aria-label="Artmetal - Pátio Inicial">
+                <img src="assets/logo/artmetal-logo.png" alt="Artmetal - Serralheria e Soluções em Metal" class="header-logo-img">
             </a>
 
-            <nav class="nav-menu" id="nav-menu">
+            <nav class="nav-menu" id="nav-menu" aria-label="Navegação Principal">
                 <ul class="nav-list">
                     <li><a href="#inicio" class="nav-link active">Início</a></li>
                     <li><a href="#sobre" class="nav-link">Sobre</a></li>
                     
                     <!-- Menu Dropdown Serviços -->
                     <li class="dropdown-item" id="dropdown-servicos-item">
-                        <span class="nav-link dropdown-toggle" id="dropdown-servicos-toggle">
+                        <button type="button" class="nav-link dropdown-toggle" id="dropdown-servicos-toggle" aria-expanded="false">
                             SERVIÇOS <i data-lucide="chevron-down" class="dropdown-icon"></i>
-                        </span>
+                        </button>
                         <ul class="dropdown-menu" id="dropdown-servicos-menu">
                             <li><a href="#configurador" class="dropdown-link">Portões</a></li>
                             <li><a href="#servicos-geral" class="dropdown-link">Vidraçaria</a></li>
@@ -73,11 +73,11 @@
             </nav>
 
             <div class="header-actions">
-                <a href="#configurador" class="btn btn-primary">
+                <a href="#configurador" class="btn btn-primary btn-header-cta">
                     <i data-lucide="calculator"></i>
                     <span>MONTE SEU PORTÃO</span>
                 </a>
-                <button class="hamburger-btn" id="hamburger-btn" aria-label="Abrir Menu">
+                <button class="hamburger-btn" id="hamburger-btn" aria-label="Abrir Menu" aria-expanded="false">
                     <i data-lucide="menu"></i>
                 </button>
             </div>
@@ -89,7 +89,7 @@
         <div class="hero-bg-overlay"></div>
         <div class="container hero-content">
             <div class="hero-badge">
-                <i data-lucide="shield-check"></i> Tecnologia & Precisão em Serralheria e Vidraçaria
+                <i data-lucide="shield-check"></i> Tecnologia &amp; Precisão em Serralheria e Vidraçaria
             </div>
             <h1 class="hero-title">Seu projeto <span class="text-gradient">começa aqui.</span></h1>
             <p class="hero-subtitle">Portões, estruturas metálicas e vidraçaria sob medida, desenvolvidos para unir segurança máxima, alta durabilidade e design moderno.</p>
@@ -139,56 +139,56 @@
                     <div class="service-card-icon"><i data-lucide="layers"></i></div>
                     <h3>Vidraçaria</h3>
                     <p>Vidros temperados e laminados para portas, janelas e divisórias com acabamento moderno e seguro.</p>
-                    <a href="https://wa.me/5511975335113?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20Vidra%C3%A7aria." target="_blank" class="btn btn-primary btn-sm">SOLICITAR ORÇAMENTO</a>
+                    <a href="https://wa.me/5511975335113?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20Vidra%C3%A7aria." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">SOLICITAR ORÇAMENTO</a>
                 </div>
                 <!-- Card 3 -->
                 <div class="service-card">
                     <div class="service-card-icon"><i data-lucide="bath"></i></div>
                     <h3>Box de Banheiro</h3>
                     <p>Acabamento elegante, segurança e facilidade de manutenção para o seu banheiro em vidro temperado.</p>
-                    <a href="https://wa.me/5511975335113?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20Box%20de%20Banheiro." target="_blank" class="btn btn-primary btn-sm">SOLICITAR ORÇAMENTO</a>
+                    <a href="https://wa.me/5511975335113?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20Box%20de%20Banheiro." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">SOLICITAR ORÇAMENTO</a>
                 </div>
                 <!-- Card 4 -->
                 <div class="service-card">
                     <div class="service-card-icon"><i data-lucide="trending-up"></i></div>
                     <h3>Corrimãos</h3>
                     <p>Segurança e acessibilidade em escadas e rampas com estruturas metálicas ou em aço inox sob medida.</p>
-                    <a href="https://wa.me/5511975335113?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20Corrim%C3%A3os." target="_blank" class="btn btn-primary btn-sm">SOLICITAR ORÇAMENTO</a>
+                    <a href="https://wa.me/5511975335113?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20Corrim%C3%A3os." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">SOLICITAR ORÇAMENTO</a>
                 </div>
                 <!-- Card 5 -->
                 <div class="service-card">
                     <div class="service-card-icon"><i data-lucide="shield"></i></div>
                     <h3>Guarda-Corpos</h3>
                     <p>Proteção essencial para sacadas, escadas e mezaninos alinhando design arquitetônico e norma técnica.</p>
-                    <a href="https://wa.me/5511975335113?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20Guarda-Corpos." target="_blank" class="btn btn-primary btn-sm">SOLICITAR ORÇAMENTO</a>
+                    <a href="https://wa.me/5511975335113?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20Guarda-Corpos." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">SOLICITAR ORÇAMENTO</a>
                 </div>
                 <!-- Card 6 -->
                 <div class="service-card">
                     <div class="service-card-icon"><i data-lucide="sun"></i></div>
                     <h3>Sacadas e Varandas</h3>
                     <p>Fechamentos e estruturas metálicas e em vidro que transformam e agregam valor ao seu espaço.</p>
-                    <a href="https://wa.me/5511975335113?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20Sacadas%20e%20Varandas." target="_blank" class="btn btn-primary btn-sm">SOLICITAR ORÇAMENTO</a>
+                    <a href="https://wa.me/5511975335113?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20Sacadas%20e%20Varandas." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">SOLICITAR ORÇAMENTO</a>
                 </div>
                 <!-- Card 7 -->
                 <div class="service-card">
                     <div class="service-card-icon"><i data-lucide="grid"></i></div>
                     <h3>Grades de Proteção</h3>
                     <p>Grades resistentes para janelas, portas e muros garantindo máxima tranquilidade para sua família.</p>
-                    <a href="https://wa.me/5511975335113?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20Grades%20de%20Prote%C3%A7%C3%A3o." target="_blank" class="btn btn-primary btn-sm">SOLICITAR ORÇAMENTO</a>
+                    <a href="https://wa.me/5511975335113?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20Grades%20de%20Prote%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">SOLICITAR ORÇAMENTO</a>
                 </div>
                 <!-- Card 8 -->
                 <div class="service-card">
                     <div class="service-card-icon"><i data-lucide="building-2"></i></div>
                     <h3>Estruturas Metálicas</h3>
                     <p>Mezaninos, coberturas e estruturas comerciais e industriais de alta resistência e durabilidade.</p>
-                    <a href="https://wa.me/5511975335113?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20Estruturas%20Met%C3%A1licas." target="_blank" class="btn btn-primary btn-sm">SOLICITAR ORÇAMENTO</a>
+                    <a href="https://wa.me/5511975335113?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20Estruturas%20Met%C3%A1licas." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">SOLICITAR ORÇAMENTO</a>
                 </div>
                 <!-- Card 9 -->
                 <div class="service-card">
                     <div class="service-card-icon"><i data-lucide="sparkles"></i></div>
                     <h3>Projetos Personalizados</h3>
                     <p>Soluções sob medida desenhadas exclusivamente para transformar sua ideia em um projeto real.</p>
-                    <a href="https://wa.me/5511975335113?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20Projeto%20Personalizado." target="_blank" class="btn btn-primary btn-sm">SOLICITAR ORÇAMENTO</a>
+                    <a href="https://wa.me/5511975335113?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20Projeto%20Personalizado." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">SOLICITAR ORÇAMENTO</a>
                 </div>
             </div>
         </div>
@@ -241,9 +241,9 @@
                     <div class="config-step-pane active" id="step-pane-1">
                         <h3 class="pane-title"><i data-lucide="layout-grid"></i> Selecione o Modelo Base</h3>
                         <div class="grid-models">
-                            <div class="card-model-select selected" data-model="chapa">
+                            <div class="card-model-select selected" data-model="chapa" tabindex="0" role="button" aria-label="Modelo Chapa Fechada">
                                 <div class="model-badge-check"><i data-lucide="check"></i></div>
-                                <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80" alt="Portão de Chapa">
+                                <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80" alt="Portão de Chapa Fechada">
                                 <div class="model-info">
                                     <h4>Chapa Fechada</h4>
                                     <p>Privacidade total com acabamento liso moderno.</p>
@@ -251,9 +251,9 @@
                                 </div>
                             </div>
 
-                            <div class="card-model-select" data-model="tubo">
+                            <div class="card-model-select" data-model="tubo" tabindex="0" role="button" aria-label="Modelo Tubular Gradil">
                                 <div class="model-badge-check"><i data-lucide="check"></i></div>
-                                <img src="https://images.unsplash.com/photo-1508873696983-2df515122519?auto=format&fit=crop&w=600&q=80" alt="Portão Tubular">
+                                <img src="https://images.unsplash.com/photo-1508873696983-2df515122519?auto=format&fit=crop&w=600&q=80" alt="Portão Tubular Gradil">
                                 <div class="model-info">
                                     <h4>Tubular Gradil</h4>
                                     <p>Maior ventilação e iluminação para a fachada.</p>
@@ -261,17 +261,17 @@
                                 </div>
                             </div>
 
-                            <div class="card-model-select" data-model="chapaTubo">
+                            <div class="card-model-select" data-model="chapaTubo" tabindex="0" role="button" aria-label="Modelo Chapa e Tubo Misto">
                                 <div class="model-badge-check"><i data-lucide="check"></i></div>
-                                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" alt="Chapa e Tubo">
+                                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" alt="Portão Chapa e Tubo Misto">
                                 <div class="model-info">
-                                    <h4>Chapa & Tubo (Misto)</h4>
+                                    <h4>Chapa &amp; Tubo (Misto)</h4>
                                     <p>O equilíbrio perfeito entre estilo e segurança.</p>
                                     <span class="model-price-tag">A partir de R$ 350/m²</span>
                                 </div>
                             </div>
 
-                            <div class="card-model-select" data-model="veneziana">
+                            <div class="card-model-select" data-model="veneziana" tabindex="0" role="button" aria-label="Modelo Portão Veneziana">
                                 <div class="model-badge-check"><i data-lucide="check"></i></div>
                                 <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80" alt="Portão Veneziana">
                                 <div class="model-info">
@@ -283,7 +283,7 @@
                         </div>
 
                         <div class="step-nav-buttons justify-end">
-                            <button class="btn btn-primary btn-next-step" data-next="2">Próximo: Medidas <i data-lucide="arrow-right"></i></button>
+                            <button type="button" class="btn btn-primary btn-next-step" data-next="2">Próximo: Medidas <i data-lucide="arrow-right"></i></button>
                         </div>
                     </div>
 
@@ -322,15 +322,15 @@
                             <div class="gate-blueprint">
                                 <span class="blueprint-dimension height-dim" id="blueprint-h-val">2.20m</span>
                                 <div class="blueprint-gate-box">
-                                    <img id="blueprint-img-preview" src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80" alt="Preview Modelo">
+                                    <img id="blueprint-img-preview" src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80" alt="Preview Modelo Selecionado">
                                 </div>
                                 <span class="blueprint-dimension width-dim" id="blueprint-w-val">3.50m</span>
                             </div>
                         </div>
 
                         <div class="step-nav-buttons">
-                            <button class="btn btn-outline-light btn-prev-step" data-prev="1"><i data-lucide="arrow-left"></i> Voltar</button>
-                            <button class="btn btn-primary btn-next-step" data-next="3">Próximo: Opcionais <i data-lucide="arrow-right"></i></button>
+                            <button type="button" class="btn btn-outline-light btn-prev-step" data-prev="1"><i data-lucide="arrow-left"></i> Voltar</button>
+                            <button type="button" class="btn btn-primary btn-next-step" data-next="3">Próximo: Opcionais <i data-lucide="arrow-right"></i></button>
                         </div>
                     </div>
 
@@ -340,20 +340,20 @@
                         <div class="options-grid">
                             
                             <div class="option-group">
-                                <label>Tipo de Abertura</label>
-                                <div class="radio-cards" id="group-abertura">
-                                    <label class="radio-card selected">
-                                        <input type="radio" name="abertura" value="basculante" checked hidden>
+                                <label id="label-abertura">Tipo de Abertura</label>
+                                <div class="radio-cards" id="group-abertura" role="radiogroup" aria-labelledby="label-abertura">
+                                    <label class="radio-card selected" tabindex="0">
+                                        <input type="radio" name="abertura" value="basculante" checked class="sr-only">
                                         <i data-lucide="maximize-2"></i>
                                         <span>Basculante (+R$ 450)</span>
                                     </label>
-                                    <label class="radio-card">
-                                        <input type="radio" name="abertura" value="correr" hidden>
+                                    <label class="radio-card" tabindex="0">
+                                        <input type="radio" name="abertura" value="correr" class="sr-only">
                                         <i data-lucide="move-horizontal"></i>
                                         <span>De Correr (+R$ 250)</span>
                                     </label>
-                                    <label class="radio-card">
-                                        <input type="radio" name="abertura" value="pivotante" hidden>
+                                    <label class="radio-card" tabindex="0">
+                                        <input type="radio" name="abertura" value="pivotante" class="sr-only">
                                         <i data-lucide="rotate-cw"></i>
                                         <span>Pivotante (+R$ 350)</span>
                                     </label>
@@ -361,20 +361,20 @@
                             </div>
 
                             <div class="option-group">
-                                <label>Automação (Motor)</label>
-                                <div class="radio-cards" id="group-automacao">
-                                    <label class="radio-card selected">
-                                        <input type="radio" name="automacao" value="noveSegundos" checked hidden>
+                                <label id="label-automacao">Automação (Motor)</label>
+                                <div class="radio-cards" id="group-automacao" role="radiogroup" aria-labelledby="label-automacao">
+                                    <label class="radio-card selected" tabindex="0">
+                                        <input type="radio" name="automacao" value="noveSegundos" checked class="sr-only">
                                         <i data-lucide="zap"></i>
                                         <span>Motor Rápido 9s (+R$ 850)</span>
                                     </label>
-                                    <label class="radio-card">
-                                        <input type="radio" name="automacao" value="dezoitoSegundos" hidden>
+                                    <label class="radio-card" tabindex="0">
+                                        <input type="radio" name="automacao" value="dezoitoSegundos" class="sr-only">
                                         <i data-lucide="clock"></i>
                                         <span>Motor Padrão 18s (+R$ 600)</span>
                                     </label>
-                                    <label class="radio-card">
-                                        <input type="radio" name="automacao" value="nao" hidden>
+                                    <label class="radio-card" tabindex="0">
+                                        <input type="radio" name="automacao" value="nao" class="sr-only">
                                         <i data-lucide="slash"></i>
                                         <span>Sem Motor (Manual)</span>
                                     </label>
@@ -382,15 +382,15 @@
                             </div>
 
                             <div class="option-group">
-                                <label>Tratamento Galvanizado a Fogo</label>
-                                <div class="radio-cards" id="group-galvanizado">
-                                    <label class="radio-card selected">
-                                        <input type="radio" name="galvanizado" value="sim" checked hidden>
+                                <label id="label-galvanizado">Tratamento Galvanizado a Fogo</label>
+                                <div class="radio-cards" id="group-galvanizado" role="radiogroup" aria-labelledby="label-galvanizado">
+                                    <label class="radio-card selected" tabindex="0">
+                                        <input type="radio" name="galvanizado" value="sim" checked class="sr-only">
                                         <i data-lucide="shield"></i>
-                                        <span>Sim, Galvanizar</span>
+                                        <span>Sim, Galvanizar (+15%)</span>
                                     </label>
-                                    <label class="radio-card">
-                                        <input type="radio" name="galvanizado" value="nao" hidden>
+                                    <label class="radio-card" tabindex="0">
+                                        <input type="radio" name="galvanizado" value="nao" class="sr-only">
                                         <i data-lucide="x-circle"></i>
                                         <span>Não Galvanizado</span>
                                     </label>
@@ -398,15 +398,15 @@
                             </div>
 
                             <div class="option-group">
-                                <label>Social Embutido no Portão</label>
-                                <div class="radio-cards" id="group-social">
-                                    <label class="radio-card selected">
-                                        <input type="radio" name="social" value="sim" checked hidden>
+                                <label id="label-social">Social Embutido no Portão</label>
+                                <div class="radio-cards" id="group-social" role="radiogroup" aria-labelledby="label-social">
+                                    <label class="radio-card selected" tabindex="0">
+                                        <input type="radio" name="social" value="sim" checked class="sr-only">
                                         <i data-lucide="user-check"></i>
                                         <span>Sim, Incluir (+R$ 300)</span>
                                     </label>
-                                    <label class="radio-card">
-                                        <input type="radio" name="social" value="nao" hidden>
+                                    <label class="radio-card" tabindex="0">
+                                        <input type="radio" name="social" value="nao" class="sr-only">
                                         <i data-lucide="user-x"></i>
                                         <span>Não Incluir</span>
                                     </label>
@@ -416,8 +416,8 @@
                         </div>
 
                         <div class="step-nav-buttons">
-                            <button class="btn btn-outline-light btn-prev-step" data-prev="2"><i data-lucide="arrow-left"></i> Voltar</button>
-                            <button class="btn btn-primary btn-next-step" data-next="4">Próximo: Resumo <i data-lucide="arrow-right"></i></button>
+                            <button type="button" class="btn btn-outline-light btn-prev-step" data-prev="2"><i data-lucide="arrow-left"></i> Voltar</button>
+                            <button type="button" class="btn btn-primary btn-next-step" data-next="4">Próximo: Resumo <i data-lucide="arrow-right"></i></button>
                         </div>
                     </div>
 
@@ -437,7 +437,7 @@
                                     <strong id="sum-modelo">Portão de Chapa Fechada</strong>
                                 </div>
                                 <div class="summary-item">
-                                    <span>Medidas & Qtd:</span>
+                                    <span>Medidas &amp; Qtd:</span>
                                     <strong id="sum-medidas">3.50m x 2.20m (1 un)</strong>
                                 </div>
                                 <div class="summary-item">
@@ -454,7 +454,7 @@
                                 </div>
                                 <div class="summary-item">
                                     <span>Tratamento Galvanizado:</span>
-                                    <strong id="sum-galvanizado">Sim (Incluso)</strong>
+                                    <strong id="sum-galvanizado">Sim (+15% ao subtotal base)</strong>
                                 </div>
                                 <div class="summary-item">
                                     <span>Social Embutido:</span>
@@ -483,7 +483,7 @@
                             </div>
                         </div>
 
-                        <!-- Botões de Ação com Destaque para Impressão -->
+                        <!-- Botão de Impressão -->
                         <div class="summary-actions-bar">
                             <button type="button" class="btn btn-print-highlight btn-lg" id="btn-print-quote">
                                 <i data-lucide="printer"></i> IMPRIMIR ORÇAMENTO DO PORTÃO
@@ -491,8 +491,8 @@
                         </div>
 
                         <div class="step-nav-buttons">
-                            <button class="btn btn-outline-light btn-prev-step" data-prev="3"><i data-lucide="arrow-left"></i> Voltar</button>
-                            <button class="btn btn-primary btn-next-step" data-next="5">Próximo: Dados para Envio <i data-lucide="arrow-right"></i></button>
+                            <button type="button" class="btn btn-outline-light btn-prev-step" data-prev="3"><i data-lucide="arrow-left"></i> Voltar</button>
+                            <button type="button" class="btn btn-primary btn-next-step" data-next="5">Próximo: Dados para Envio <i data-lucide="arrow-right"></i></button>
                         </div>
                     </div>
 
@@ -534,14 +534,14 @@
                         </form>
 
                         <div class="step-nav-buttons">
-                            <button class="btn btn-outline-light btn-prev-step" data-prev="4"><i data-lucide="arrow-left"></i> Voltar ao Resumo</button>
+                            <button type="button" class="btn btn-outline-light btn-prev-step" data-prev="4"><i data-lucide="arrow-left"></i> Voltar ao Resumo</button>
                         </div>
                     </div>
 
                 </div>
 
                 <!-- SIDEBAR DO CONFIGURADOR -->
-                <div class="config-sidebar">
+                <aside class="config-sidebar">
                     <div class="sidebar-card">
                         <h4>Resumo do Pedido</h4>
                         <div class="sidebar-model-preview">
@@ -556,7 +556,7 @@
 
                         <div>
                             <span style="color: #a0aec0; font-size: 0.85rem;">Valor Total Estimado:</span>
-                            <div class="live-price" id="sidebar-live-price">R$ 4.969,50</div>
+                            <div class="live-price" id="sidebar-live-price">R$ 0,00</div>
                         </div>
 
                         <ul class="sidebar-features-list">
@@ -565,7 +565,7 @@
                             <li><i data-lucide="check-circle-2"></i> Garantia de qualidade</li>
                         </ul>
                     </div>
-                </div>
+                </aside>
             </div>
         </div>
     </section>
@@ -578,7 +578,7 @@
     </footer>
 
     <!-- BOTÃO FIXO DO WHATSAPP -->
-    <a href="https://wa.me/5511975335113" class="whatsapp-float-btn" target="_blank" aria-label="Falar no WhatsApp">
+    <a href="https://wa.me/5511975335113" class="whatsapp-float-btn" target="_blank" rel="noopener noreferrer" aria-label="Falar com a Artmetal no WhatsApp">
         <i data-lucide="message-circle"></i>
     </a>
 
@@ -604,13 +604,13 @@
             <h4>Especificações do Projeto</h4>
             <div class="print-project-grid">
                 <div class="print-project-info">
-                    <p><strong>Modelo Escolhido:</strong> <span id="sum-modelo">Portão de Chapa Fechada</span></p>
-                    <p><strong>Dimensões & Qtd:</strong> <span id="sum-medidas">3.50m x 2.20m (1 un)</span></p>
-                    <p><strong>Área Total Calculada:</strong> <span id="sum-area">7,70 m²</span></p>
-                    <p><strong>Sistema de Abertura:</strong> <span id="sum-abertura">Basculante</span></p>
-                    <p><strong>Automação:</strong> <span id="sum-automacao">Motor Rápido (9s)</span></p>
-                    <p><strong>Tratamento Galvanizado:</strong> <span id="sum-galvanizado">Sim</span></p>
-                    <p><strong>Portão Social Embutido:</strong> <span id="sum-social">Sim</span></p>
+                    <p><strong>Modelo Escolhido:</strong> <span id="print-sum-modelo">Portão de Chapa Fechada</span></p>
+                    <p><strong>Dimensões &amp; Qtd:</strong> <span id="print-sum-medidas">3.50m x 2.20m (1 un)</span></p>
+                    <p><strong>Área Total Calculada:</strong> <span id="print-sum-area">7,70 m²</span></p>
+                    <p><strong>Sistema de Abertura:</strong> <span id="print-sum-abertura">Basculante</span></p>
+                    <p><strong>Automação:</strong> <span id="print-sum-automacao">Motor Rápido (9s)</span></p>
+                    <p><strong>Tratamento Galvanizado:</strong> <span id="print-sum-galvanizado">Sim (+15% ao subtotal base)</span></p>
+                    <p><strong>Portão Social Embutido:</strong> <span id="print-sum-social">Sim (Embutido)</span></p>
                 </div>
                 <div class="print-project-img-wrapper">
                     <img id="print-gate-image" src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80" alt="Modelo do Portão">
@@ -621,18 +621,17 @@
         <div class="print-total-box">
             <div class="print-total-row">
                 <span>VALOR ESTIMADO DO PROJETO:</span>
-                <strong id="print-total-price">R$ 4.969,50</strong>
+                <strong id="print-total-price">R$ 0,00</strong>
             </div>
         </div>
 
         <div class="print-footer-note">
-            <p>Artmetal Serralheria • contato@artmetalserralheria.com.br • WhatsApp: (11) 97533-5113</p>
+            <p>Artmetal Serralheria • WhatsApp: (11) 97533-5113</p>
             <p>Este documento é uma estimativa orçamentária baseada nas medidas fornecidas. Válido por 15 dias.</p>
         </div>
     </div>
 
     <!-- Scripts -->
     <script src="js/script.js"></script>
-    <script src="js/main.js"></script>
 </body>
 </html>

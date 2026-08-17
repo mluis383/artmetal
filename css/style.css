@@ -356,13 +356,55 @@ img {
 .hamburger-btn { display: none; background: none; border: none; color: #ffffff; cursor: pointer; padding: 5px; }
 
 /* HERO SECTION */
+/* HERO SECTION */
 .hero {
-    position: relative; min-height: 90vh; display: flex; align-items: center;
-    background: url('https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
-    padding-top: 100px; padding-bottom: 60px;
+    position: relative;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    background-color: var(--cor-principal); /* Garante fundo grafite/preto escuro */
+    padding-top: 100px;
+    padding-bottom: 60px;
+    overflow: hidden; /* Garante ausência de rolagem horizontal */
 }
-.hero-bg-overlay { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(18, 21, 28, 0.95) 0%, rgba(18, 21, 28, 0.75) 60%); }
-.hero-content { position: relative; z-index: 2; max-width: 750px; }
+
+/* Camada da imagem com a logo AM posicionada no lado direito */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 55%;
+    height: 100%;
+    background-image: url('../assets/logo/artmetal-hero-bg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right center;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Overlay de gradiente escuro: mais denso no lado esquerdo sobre o texto */
+.hero-bg-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg, 
+        rgba(18, 21, 28, 0.98) 0%, 
+        rgba(18, 21, 28, 0.85) 45%, 
+        rgba(18, 21, 28, 0.35) 80%, 
+        rgba(18, 21, 28, 0.6) 100%
+    );
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Conteúdo da Hero em camada superior */
+.hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 750px;
+}
 .hero-badge { display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; background: rgba(255, 107, 0, 0.15); border: 1px solid var(--cor-destaque); border-radius: 30px; color: var(--cor-destaque); font-size: 0.85rem; font-weight: 700; margin-bottom: 25px; }
 .hero-title { font-size: 3.2rem; color: #ffffff; margin-bottom: 20px; }
 .text-gradient { background: linear-gradient(135deg, #ffffff 0%, #a0aec0 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
@@ -370,12 +412,39 @@ img {
 .hero-buttons { display: flex; gap: 15px; margin-bottom: 30px; flex-wrap: wrap; }
 .hero-callout { display: flex; align-items: center; gap: 10px; color: #a0aec0; font-size: 0.9rem; }
 
-/* GRADE GERAL DOS SERVIÇOS */
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    margin-top: 40px;
+/* Ajustes de Responsividade para Telas Menores e Mobile */
+@media (max-width: 992px) {
+    .hero::before {
+        width: 70%;
+        opacity: 0.35; /* Reduz a intensidade visual atrás do texto em telas médias */
+    }
+    .hero-title { font-size: 2.5rem; }
+}
+
+@media (max-width: 768px) {
+    .hero::before {
+        width: 100%;
+        height: 50%;
+        top: auto;
+        bottom: 0;
+        background-position: center bottom;
+        opacity: 0.25; /* Reposiciona para a base mantendo alto contraste dos textos */
+    }
+    .hero-bg-overlay {
+        background: linear-gradient(
+            180deg, 
+            rgba(18, 21, 28, 0.98) 0%, 
+            rgba(18, 21, 28, 0.85) 60%, 
+            rgba(18, 21, 28, 0.95) 100%
+        );
+    }
+    .hero-title { font-size: 2.1rem; }
+    .hero-subtitle { font-size: 1rem; }
+}
+
+@media (max-width: 480px) {
+    .hero-title { font-size: 1.8rem; }
+    .hero-buttons { flex-direction: column; }
 }
 
 .service-card {

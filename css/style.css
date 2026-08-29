@@ -555,6 +555,20 @@ img {
 /* 8. REGRAS DE IMPRESSÃO (A4 PDF) */
 .print-only { display: none; }
 @media print {
+    /* Reset de página: evita páginas em branco extras causadas pela altura
+       total do site (hero, seções, etc.) permanecer no fluxo do documento. */
+    @page { size: A4; margin: 0; }
+    html, body {
+        height: auto !important;
+        margin: 0 !important;
+        overflow: visible !important;
+    }
+
+    /* Remove de fato (display: none) todos os elementos de nível superior,
+       tirando-os do fluxo/altura da página - visibility:hidden sozinho
+       mantém o espaço reservado e é o que gera as páginas em branco. */
+    body > *:not(#printable-summary) { display: none !important; }
+
     body * { visibility: hidden; }
     #printable-summary, #printable-summary * { visibility: visible; }
     #printable-summary {
@@ -562,9 +576,17 @@ img {
         position: absolute; left: 0; top: 0; width: 100%;
         padding: 30px; background: #ffffff; color: #000000; font-family: Arial, sans-serif;
     }
-    .print-header { border-bottom: 2px solid #ff6b00; padding-bottom: 15px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: flex-end; }
-    .print-brand-title { font-size: 24pt; font-weight: bold; color: #12151c; }
-    .print-sub-title { font-size: 14pt; color: #ff6b00; font-weight: bold; }
+    .print-header {
+        border-bottom: 2px solid #ff6b00; padding-bottom: 15px; margin-bottom: 20px;
+        display: flex; justify-content: space-between; align-items: center; gap: 15px;
+    }
+    .print-header-brand { display: flex; align-items: center; gap: 12px; }
+    .print-logo-img { height: 46px !important; width: auto !important; max-width: 150px !important; max-height: 46px !important; object-fit: contain !important; }
+    .print-header-titles { display: flex; flex-direction: column; }
+    .print-header-info { text-align: right; }
+    .print-brand-title { font-size: 20pt; font-weight: bold; color: #12151c; }
+    .print-sub-title { font-size: 12pt; color: #ff6b00; font-weight: bold; }
+    .print-date { font-size: 9pt; color: #666666; margin-top: 4px; }
     .print-client-box, .print-project-box { border: 1px solid #cccccc; border-radius: 6px; padding: 15px; margin-bottom: 20px; }
     .print-client-grid, .print-project-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; font-size: 10pt; }
     .print-total-box { background: #f4f6f8; border: 2px solid #ff6b00; padding: 15px; text-align: right; border-radius: 6px; margin-bottom: 20px; }

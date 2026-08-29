@@ -1,0 +1,36 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#12151c"/>
+  <!-- main columns -->
+  <g stroke="#ffffff" stroke-width="10" stroke-linecap="round">
+    <line x1="140" y1="540" x2="140" y2="120"/>
+    <line x1="400" y1="540" x2="400" y2="90"/>
+    <line x1="660" y1="540" x2="660" y2="120"/>
+  </g>
+  <!-- roof beams -->
+  <path d="M140 120 L400 90 L660 120" fill="none" stroke="#ff6b00" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- secondary beams / mezzanine level -->
+  <line x1="140" y1="320" x2="660" y2="320" stroke="#8a93a6" stroke-width="8" stroke-linecap="round"/>
+  <line x1="140" y1="320" x2="400" y2="295" stroke="#8a93a6" stroke-width="6" stroke-linecap="round"/>
+  <line x1="400" y1="295" x2="660" y2="320" stroke="#8a93a6" stroke-width="6" stroke-linecap="round"/>
+  <!-- diagonal bracing (trelica) -->
+  <g stroke="#3a4256" stroke-width="6" stroke-linecap="round">
+    <line x1="140" y1="540" x2="270" y2="430"/>
+    <line x1="270" y1="430" x2="140" y2="320"/>
+    <line x1="270" y1="430" x2="400" y2="540"/>
+    <line x1="400" y1="540" x2="530" y2="430"/>
+    <line x1="530" y1="430" x2="660" y2="540"/>
+    <line x1="530" y1="430" x2="400" y2="320"/>
+    <line x1="270" y1="430" x2="400" y2="320"/>
+    <line x1="530" y1="430" x2="660" y2="320"/>
+  </g>
+  <!-- decking / mezzanine floor plates -->
+  <g fill="#1e232d" stroke="#2c3341" stroke-width="2">
+    <rect x="140" y="300" width="520" height="20"/>
+  </g>
+  <!-- base plates -->
+  <g fill="#3a4256">
+    <rect x="118" y="536" width="44" height="10" rx="2"/>
+    <rect x="378" y="536" width="44" height="10" rx="2"/>
+    <rect x="638" y="536" width="44" height="10" rx="2"/>
+  </g>
+</svg>

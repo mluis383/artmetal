@@ -1,0 +1,47 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#12151c"/>
+  <rect x="120" y="80" width="560" height="440" rx="6" fill="#1e232d" stroke="#2c3341" stroke-width="2"/>
+  <!-- wall texture -->
+  <rect x="0" y="0" width="800" height="600" fill="url(#brick)" opacity="0.05"/>
+  <defs>
+    <pattern id="brick" width="80" height="40" patternUnits="userSpaceOnUse">
+      <rect width="80" height="40" fill="none"/>
+      <line x1="0" y1="20" x2="80" y2="20" stroke="#ffffff" stroke-width="1"/>
+      <line x1="40" y1="0" x2="40" y2="20" stroke="#ffffff" stroke-width="1"/>
+      <line x1="0" y1="20" x2="0" y2="40" stroke="#ffffff" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <!-- window opening -->
+  <rect x="170" y="130" width="460" height="340" fill="#0b0d12" stroke="#3a4256" stroke-width="4"/>
+  <!-- window panes glow -->
+  <rect x="185" y="145" width="200" height="150" fill="#2a3a52" opacity="0.5"/>
+  <rect x="415" y="145" width="200" height="150" fill="#22304a" opacity="0.4"/>
+  <rect x="185" y="310" width="430" height="145" fill="#1a2436" opacity="0.5"/>
+  <!-- protective grid bars vertical -->
+  <g stroke="#ff6b00" stroke-width="6" stroke-linecap="round">
+    <line x1="210" y1="130" x2="210" y2="470"/>
+    <line x1="260" y1="130" x2="260" y2="470"/>
+    <line x1="310" y1="130" x2="310" y2="470"/>
+    <line x1="360" y1="130" x2="360" y2="470"/>
+    <line x1="410" y1="130" x2="410" y2="470"/>
+    <line x1="460" y1="130" x2="460" y2="470"/>
+    <line x1="510" y1="130" x2="510" y2="470"/>
+    <line x1="560" y1="130" x2="560" y2="470"/>
+    <line x1="610" y1="130" x2="610" y2="470"/>
+  </g>
+  <!-- horizontal cross bars -->
+  <g stroke="#ffffff" stroke-width="8" stroke-linecap="round" opacity="0.92">
+    <line x1="170" y1="200" x2="630" y2="200"/>
+    <line x1="170" y1="300" x2="630" y2="300"/>
+    <line x1="170" y1="400" x2="630" y2="400"/>
+  </g>
+  <!-- frame -->
+  <rect x="170" y="130" width="460" height="340" fill="none" stroke="#ffffff" stroke-width="8"/>
+  <!-- decorative corner rivets -->
+  <g fill="#ff6b00">
+    <circle cx="170" cy="130" r="7"/>
+    <circle cx="630" cy="130" r="7"/>
+    <circle cx="170" cy="470" r="7"/>
+    <circle cx="630" cy="470" r="7"/>
+  </g>
+</svg>

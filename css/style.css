@@ -393,6 +393,7 @@ img {
     margin: 0 auto 40px auto; 
     overflow-x: auto;
     padding-bottom: 10px;
+    scroll-margin-top: 90px;
 }
 .step-item { display: flex; flex-direction: column; align-items: center; gap: 6px; opacity: 0.4; transition: var(--transicao-suave); flex-shrink: 0; }
 .step-item.active { opacity: 1; }
@@ -424,7 +425,7 @@ img {
 .model-info p { font-size: 0.8rem; color: #a0aec0; margin-bottom: 8px; }
 .model-price-tag { display: inline-block; font-size: 0.8rem; font-weight: 700; color: var(--cor-destaque); }
 
-.grid-measures { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin-bottom: 30px; }
+.grid-measures { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 25px; margin-bottom: 30px; }
 .form-group { margin-bottom: 18px; }
 .form-group label { display: block; color: #e2e8f0; font-size: 0.88rem; font-weight: 600; margin-bottom: 8px; }
 .input-with-unit { position: relative; }
@@ -440,6 +441,8 @@ img {
 .calc-area-box span { color: #e2e8f0; font-size: 0.9rem; }
 .calc-area-box strong { color: var(--cor-destaque); font-size: 1.2rem; font-family: var(--fonte-titulo); }
 
+.measures-form, .gate-blueprint { min-width: 0; }
+
 /* BLUEPRINT E ANIMAÇÕES DO PORTÃO SVG */
 .gate-blueprint {
     position: relative;
@@ -453,6 +456,7 @@ img {
     justify-content: center;
     width: 100%;
     max-width: 100%;
+    min-width: 0;
     box-sizing: border-box;
     overflow: hidden;
 }
@@ -614,6 +618,8 @@ img {
     .dropdown-item.open .dropdown-menu { display: block; }
     .hamburger-btn { display: block; }
     .btn-header-cta { display: none; }
-    .grid-2-form, .grid-measures { grid-template-columns: 1fr; }
+    .grid-2-form, .grid-measures { grid-template-columns: minmax(0, 1fr); }
     .hero-title { font-size: 2.2rem; }
+    .config-main-content { padding: 18px; }
+    .gate-blueprint { padding: 16px; }
 }

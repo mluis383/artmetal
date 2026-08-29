@@ -369,6 +369,14 @@ document.addEventListener('DOMContentLoaded', function () {
                 item.classList.add('active');
             }
         });
+
+        // Rola até o topo do stepper (indicador de etapas) para que o usuário
+        // sempre veja o início da nova etapa, em vez de permanecer na posição
+        // de rolagem anterior (que ficava "mais para baixo" no conteúdo novo).
+        const stepperEl = document.querySelector('.config-stepper');
+        if (stepperEl) {
+            stepperEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
     }
 
     document.querySelectorAll('.btn-next-step').forEach(btn => {
